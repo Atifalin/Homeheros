@@ -1,0 +1,253 @@
+/*
+====================================
+ DARK THEME OVERRIDES
+====================================
+*/
+:root {
+    --primary-color: #fff;              /* White for text and accents */
+    --secondary-color: #1a4314;         /* Hunter green background */
+    --dark-color: #fff;                 /* White text */
+    --light-color: #1a4314;             /* Hunter green background */
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --max-width: 1200px;
+}
+
+body {
+    background: linear-gradient(135deg, #1a4314 0%, #14521e 100%);
+    color: #fff;
+}
+
+.hero {
+    background: #1a4314 !important;
+    background-image: none !important;
+    position: relative;
+}
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; right: 0; bottom: -1px; height: 60px;
+    background: linear-gradient(to bottom, #1a4314 60%, #14521e 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.services {
+    position: relative;
+    z-index: 2;
+}
+.services::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; right: 0; top: -60px; height: 60px;
+    background: linear-gradient(to top, #14521e 60%, #1a4314 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+a, a:visited, .nav-links a, .footer-links a {
+    color: #fff;
+}
+
+a:hover, .nav-links a:hover, .footer-links a:hover {
+    color: #e8f5ec;
+}
+
+nav {
+    background: #14521e;
+    box-shadow: 5px 5px 10px #0e2911, -5px -5px 10px #1a4314;
+}
+
+.logo h1 {
+    color: #e8f5ec !important;
+}
+
+.hero {
+    background: #1a4314;
+}
+
+.hero-bento {
+    background: #14521e;
+    box-shadow: 0 4px 32px 0 rgba(255,255,255,0.09), 0 2px 12px 0 rgba(255,255,255,0.06);
+}
+
+.hero-bento-text h1,
+.hero-bento-text p {
+    color: #fff;
+}
+
+.hero-bento-logo img {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 18px #fff2;
+}
+
+section, .container {
+    background: transparent;
+    color: #fff;
+}
+
+/* --- DARK THEME: About/Founder Cards --- */
+.founder-profile, .about-card, .founder-content {
+    background: #14521e !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.founder-header h3, .founder-title, .founder-content p, .founder-full-story {
+    color: #fff !important;
+}
+
+.founder-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #1a4314;
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: 3px solid #e8f5ec;
+    margin: 0 auto;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.founders-section {
+    background: #14521e !important;
+}
+.team-heading {
+    color: #fff !important;
+    background: none !important;
+}
+.founder-profile, .about-card, .founder-content {
+    background: #14521e !important;
+    color: #fff !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.founder-header h3, .founder-title, .founder-content p, .founder-full-story {
+    color: #fff !important;
+}
+.founder-full-story {
+    background: #17401a !important;
+    border-radius: 12px;
+    padding: 1.5rem !important;
+}
+.read-more-btn {
+    background: #1a4314 !important;
+    color: #fff !important;
+    border: 2px solid #e8f5ec !important;
+    border-radius: 8px;
+    padding: 0.6em 1.4em;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: none !important;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.read-more-btn:hover {
+    background: #e8f5ec !important;
+    color: #1a4314 !important;
+    border: 2px solid #fff !important;
+}
+.about-card blockquote {
+    color: #e8f5ec !important;
+}
+
+.services {
+    background: #14521e;
+}
+
+.service-card-horizontal,
+.services-list-horizontal {
+    background: #1a4314;
+    color: #fff;
+    box-shadow: 0 2px 12px #fff2;
+}
+
+.service-card-content h3 {
+    color: #fff;
+}
+
+.service-card-content p {
+    color: #e8f5ec;
+}
+
+.footer-logo h2, .footer-logo p, .footer-links h3, .footer-contact h3, .footer-bottom p,
+.footer-links ul li, .footer-contact p, .section-title, .section-subtitle,
+.service-card-content p, .service-card-content h3, .countdown-timer {
+    color: #fff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+h1, h2, h3, h4, h5, h6, .section-title, .section-subtitle {
+    color: #fff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.service-card-content p, .service-card-content h3 {
+    color: #fff !important;
+    text-shadow: none !important;
+}
+
+
+.footer-links a {
+    color: #fff;
+}
+
+.footer-links a:hover {
+    color: #e8f5ec;
+}
+
+footer {
+    background: #1a4314;
+    color: #fff;
+}
+
+.social-icons a {
+    background-color: #14521e;
+    color: #fff;
+}
+
+.social-icons a:hover {
+    background-color: #fff;
+    color: #1a4314;
+}
+
+/* Countdown section */
+.countdown {
+    background-color: #14521e;
+    color: #fff;
+}
+
+.launch-visuals, .launch-countdown-box {
+    background: #1a4314;
+    color: #fff;
+}
+
+.launch-message {
+    color: #e8f5ec;
+}
+
+/* Responsive tweaks for dark mode */
+@media (max-width: 900px) {
+    .hero-bento {
+        background: #14521e;
+    }
+}
+@media (max-width: 600px) {
+    .hero-bento {
+        background: #14521e;
+    }
+}

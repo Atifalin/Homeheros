@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Heros - Coming Soon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========================
+         HERO SECTION
+         Update your brand name, headline, subheadline, CTA text, and hero image below.
+    =========================-->
+    <section class="hero">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html" style="text-decoration:none;"><h1 style="color:#1a4314;">Home Heros</h1></a>
+                </div>
+                <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="register.html">Register as Contractor</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+            </nav>
+            <div class="hero-bento">
+  <div class="hero-bento-text">
+    <h1>Making Home Life Easier, One Hero at a Time</h1>
+    <p>Connecting Canadian families with trusted household professionals for cleaning, cooking, pet care, and more. Reclaim your time for what truly matters.</p>
+  </div>
+  <div class="hero-bento-logo">
+    <img src="images/logo.png" alt="Home Heros Logo" />
+  </div>
+</div>
+        </div>
+    </section>
+
+
+
+    <!-- ========================
+         SERVICES SECTION
+         Update service icons, titles, and descriptions below.
+         Use Font Awesome icons or your own SVGs.
+    =========================-->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" style="color:#1a4314;">Our Services</h2>
+            <p class="section-subtitle" style="color:#1a4314;">Professional solutions for all your home needs</p>
+            
+            <div class="services-list-horizontal">
+                <div class="service-card-horizontal">
+                    <img src="images/maid.jpg" alt="Maid Services" class="service-img-horizontal">
+                    <div class="service-card-content">
+                        <h3>Maid Services</h3>
+                        <p>Caretakers, cleaners, and babysitters to help maintain your home and care for your family.</p>
+                    </div>
+                </div>
+                <div class="service-card-horizontal">
+                    <img src="images/cooks.jpg" alt="Cooks/Chefs" class="service-img-horizontal">
+                    <div class="service-card-content">
+                        <h3>Cooks/Chefs</h3>
+                        <p>Professional culinary services for parties, anniversaries, and special occasion dinners.</p>
+                    </div>
+                </div>
+                <div class="service-card-horizontal">
+                    <img src="images/event.jpg" alt="Event Planning" class="service-img-horizontal">
+                    <div class="service-card-content">
+                        <h3>Event Planning</h3>
+                        <p>Decorations for baby showers, wedding planning services, and corporate event organization.</p>
+                    </div>
+                </div>
+                <div class="service-card-horizontal">
+                    <img src="images/travel.jpg" alt="Travelling" class="service-img-horizontal">
+                    <div class="service-card-content">
+                        <h3>Travelling</h3>
+                        <p>Guides, personal drivers/chauffeurs, tour guides, and wine tours for a memorable experience.</p>
+                    </div>
+                </div>
+                <div class="service-card-horizontal">
+                    <img src="images/handyman.jpg" alt="Handyman Services" class="service-img-horizontal">
+                    <div class="service-card-content">
+                        <h3>Handyman Services</h3>
+                        <p>Plumbers, gardeners/landscapers, painters, carpenters, and more for all your home maintenance needs.</p>
+                    </div>
+                </div>
+                <div class="service-card-horizontal">
+                    <img src="images/auto.jpg" alt="Automobile Repairs" class="service-img-horizontal">
+                    <div class="service-card-content">
+                        <h3>Automobile Repairs</h3>
+                        <p>Mechanics and mobile detailing services to keep your vehicles in perfect condition.</p>
+                    </div>
+                </div>
+                <div class="service-card-horizontal">
+                    <img src="images/personal.jpg" alt="Personal Care" class="service-img-horizontal">
+                    <div class="service-card-content">
+                        <h3>Personal Care</h3>
+                        <p>Massage and spa services to help you relax and rejuvenate in the comfort of your home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+         LAUNCHING SOON SECTION
+         Email signup section temporarily hidden as requested
+    =========================-->
+    <section class="countdown" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color:#1a4314;">Launching Soon</h2>
+            <p class="section-subtitle" style="color:#1a4314;">By the end of 2026, Home Heros aims to become Canada's #1 company for domestic services</p>
+            <div class="launch-visuals">
+                <div class="launch-countdown-box">
+                    <div class="countdown-timer" style="color:#1a4314;">
+                        <span id="days">00</span> days
+                        <span id="hours">00</span> hours
+                        <span id="minutes">00</span> min
+                        <span id="seconds">00</span> sec
+                    </div>
+                    <p class="launch-message" style="color:#1a4314;">Be the first to experience a new era of home services!</p>
+                </div>
+                <div class="launch-image">
+                    <img src="images/logo.png" alt="Home Heros Launch" class="launch-logo-square" style="max-width:160px; filter:drop-shadow(0 0 12px #1a4314);">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Simple countdown (replace with actual launch date)
+        const countdownDate = new Date('2025-09-31T23:59:59').getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = countdownDate - now;
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+
+    <!-- ========================
+         FOOTER SECTION
+         Update brand, contact info, and social links below.
+         Replace '#' in <a href="#"> with your actual social URLs.
+    =========================-->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Home Heros</h2>
+                    <p>Because every home deserves a hero</p>
+                </div>
+                <div class="footer-links">
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="register.html">Register as Contractor</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+    </ul>
+</div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Utkarsh@homeheros.com">Utkarsh@homeheros.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Bavneet@homeheros.com">Bavneet@homeheros.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Garima@homeheros.com">Garima@homeheros.com</a></p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Home Heros. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <!-- Card flip functionality for founder bios -->
+    <script src="js/card-flip.js"></script>
+</body>
+</html>
