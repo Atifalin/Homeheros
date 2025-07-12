@@ -98,18 +98,19 @@
     display: block;
     width: 100%;
     padding: 1rem;
-    background: var(--primary-color);
+    background: #28a745;
     color: white;
     border: none;
     border-radius: 6px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .register-form button:hover {
-    background: #14521e;
+    background: #218838;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
 }
 
 /* Resume & Cover Letter Options */
