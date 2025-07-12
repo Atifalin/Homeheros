@@ -6,27 +6,29 @@
 
 .register-section {
     padding: 4rem 0;
-    background-color: #f9f9f9;
+    background-color: transparent;
 }
 
 .register-section h2 {
     margin-bottom: 1.5rem;
     text-align: center;
+    color: #fff !important;
 }
 
 .register-section p {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 2.5rem;
+    color: #e8f5ec;
 }
 
 .register-form {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
-    background: #fff;
+    background: #14521e;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .form-group {
@@ -48,12 +50,12 @@
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: #fff;
 }
 
 .form-helper {
     font-size: 0.9rem;
-    color: #666;
+    color: #e8f5ec;
     margin-bottom: 1rem;
 }
 
@@ -65,18 +67,26 @@
 .register-form textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #1a4314;
     border-radius: 6px;
     font-size: 1rem;
+    background-color: #17401a;
+    color: #fff;
     transition: border 0.3s, box-shadow 0.3s;
+}
+
+.register-form input::placeholder,
+.register-form textarea::placeholder {
+    color: #a0c9a4;
+    opacity: 0.7;
 }
 
 .register-form input:focus,
 .register-form select:focus,
 .register-form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(26, 67, 20, 0.1);
+    border-color: #e8f5ec;
+    box-shadow: 0 0 0 2px rgba(232, 245, 236, 0.2);
 }
 
 .register-form textarea {
@@ -106,25 +116,25 @@
 .option-tabs {
     display: flex;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #1a4314;
 }
 
 .option-tab {
     padding: 0.7rem 1.2rem;
     cursor: pointer;
     font-weight: 500;
-    color: #666;
+    color: #a0c9a4;
     border-bottom: 2px solid transparent;
     transition: all 0.3s;
 }
 
 .option-tab:hover {
-    color: var(--primary-color);
+    color: #e8f5ec;
 }
 
 .option-tab.active {
-    color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
 .tab-content {
@@ -156,6 +166,13 @@
 .checkbox-group label {
     margin-bottom: 0;
     display: inline;
+    color: #e8f5ec;
+}
+
+.tab-content p {
+    margin-top: 0.5rem;
+    display: inline;
+    color: #e8f5ec;
 }
 
 /* Responsive adjustments */
