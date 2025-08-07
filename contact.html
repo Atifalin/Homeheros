@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Home Heros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-dark.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="hero mini-hero">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html" style="text-decoration:none;"><h1 style="color:#1a4314;">Home Heros</h1></a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="register.html">Register as Contractor</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero-bento">
+                <div class="hero-bento-text">
+                    <h1>Contact Us</h1>
+                    <p>Ready to connect with trusted professionals for your home service needs? Get in touch with us today and let us help you find the perfect Home Hero for your project!</p>
+                </div>
+                <div class="hero-bento-logo">
+                    <img src="images/logo.png" alt="Home Heros Logo" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="register-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Tell us about your project and we'll connect you with the right professional for the job.</p>
+            <form class="register-form" action="https://formspree.io/f/xanjzqar" method="POST">
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Needed*</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="maid-services">Maid Services</option>
+                        <option value="cooks-chefs">Cooks & Chefs</option>
+                        <option value="handyman-services">Handyman Services</option>
+                        <option value="personal-care">Personal Care</option>
+                        <option value="auto-repair">Auto Repair</option>
+                        <option value="travel-services">Travel Services</option>
+                        <option value="event-planning">Event Planning</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location/Address*</label>
+                    <input type="text" id="location" name="location" placeholder="City, Province" required>
+                </div>
+                <div class="form-group">
+                    <label for="timeline">When do you need this service?*</label>
+                    <select id="timeline" name="timeline" required>
+                        <option value="">Select timeline</option>
+                        <option value="asap">As soon as possible</option>
+                        <option value="this-week">This week</option>
+                        <option value="next-week">Next week</option>
+                        <option value="this-month">This month</option>
+                        <option value="flexible">I'm flexible</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget Range</label>
+                    <select id="budget" name="budget">
+                        <option value="">Select budget range</option>
+                        <option value="under-100">Under $100</option>
+                        <option value="100-250">$100 - $250</option>
+                        <option value="250-500">$250 - $500</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-plus">$1,000+</option>
+                        <option value="discuss">Prefer to discuss</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Details*</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Please describe your project, specific requirements, and any additional details..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="contact-preference">Preferred Contact Method</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="contact-email" name="contact-preference" value="email">
+                        <label for="contact-email">Email</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="contact-phone" name="contact-preference" value="phone">
+                        <label for="contact-phone">Phone</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="contact-text" name="contact-preference" value="text">
+                        <label for="contact-text">Text Message</label>
+                    </div>
+                </div>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Home Heros</h2>
+                <p>Because every home deserves a hero</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="register.html">Register as Contractor</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Utkarsh@homeheros.ca">Utkarsh@homeheros.ca</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Bavneet@homeheros.ca">Bavneet@homeheros.ca</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Garima@homeheros.ca">Garima@homeheros.ca</a></p>
+                <div class="social-icons" style="display: flex; justify-content: center; gap: 18px; margin-top: 10px;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Home Heros. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+    <script src="js/mobile-nav.js"></script>
+</body>
+</html>
