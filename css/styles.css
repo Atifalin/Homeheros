@@ -121,62 +121,38 @@ img {
 
 .cta-button {
     display: inline-block;
-    background: #e6e9ef;
-    color: #4a6bff;
-    padding: 1.2rem 3.2rem;
+    background: #1a4314 !important;
+    color: white !important;
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 16px;
-    font-size: 1.3rem;
-    font-weight: 700;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    box-shadow: 8px 8px 16px #c5c8ce,
-               -8px -8px 16px #ffffff;
     transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     outline: none;
-    z-index: 2;
     letter-spacing: 0.5px;
     margin-top: 1.2rem;
-    border: none;
 }
 
-@keyframes ctaPulse {
-    0% { box-shadow: 0 0 0 0 #4a6bff44, 0 2px 12px #ff6b6b33; }
-    60% { box-shadow: 0 0 0 16px #4a6bff11, 0 2px 12px #ff6b6b33; }
-    100% { box-shadow: 0 0 0 0 #4a6bff44, 0 2px 12px #ff6b6b33; }
-}
 
-.cta-button::after {
-    content: '';
-    position: absolute;
-    left: -75%;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(90deg,rgba(255,255,255,0.25) 0%,rgba(255,255,255,0.08) 100%);
-    transform: skewX(-20deg);
-    transition: left 0.4s cubic-bezier(.19,1,.22,1);
-    pointer-events: none;
-    z-index: 2;
-}
+
+
 
 .cta-button:focus {
     outline: none;
-    box-shadow: inset 8px 8px 16px #c5c8ce,
-                inset -8px -8px 16px #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .cta-button:hover {
-    background: #e6e9ef;
+    background: #14521e !important;
     transform: translateY(-2px);
-    box-shadow: 10px 10px 20px #c5c8ce,
-               -10px -10px 20px #ffffff;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-.cta-button:hover::after {
-    left: 120%;
-}
+
 
 
 section {
@@ -709,8 +685,7 @@ nav {
     padding: 40px;
     background-color: #e6e9ef;
     border-radius: 20px;
-    box-shadow: 12px 12px 24px #c5c8ce,
-               -12px -12px 24px #ffffff;
+    box-shadow: none;
     margin-top: 16px;
 }
 
@@ -720,8 +695,7 @@ nav {
     border-radius: 50%;
     overflow: hidden;
     border: 8px solid #e6e9ef;
-    box-shadow: 8px 8px 16px #c5c8ce,
-               -8px -8px 16px #ffffff;
+    box-shadow: none;
     position: relative;
     margin: -100px auto 30px;
     background: #e6e9ef;
@@ -779,157 +753,7 @@ nav {
     color: #666;
 }
 
-/*
-====================================
- SERVICES SECTION
-====================================
-*/
-.services {
-    background: none;
-    padding: 60px 0 40px 0;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-.service-emoji {
-    font-size: 3.5rem;
-    margin-right: 2rem;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    min-width: 80px;
-    height: 80px;
-    text-shadow: 0 2px 8px #0002;
-    background: none;
-}
-
-
-.services-list-horizontal {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.service-card-horizontal {
-    display: flex;
-    align-items: center;
-    background: transparent;
-    border-radius: 20px;
-    box-shadow: none;
-    overflow: hidden;
-    transition: box-shadow 0.3s, transform 0.3s;
-    min-height: 180px;
-    padding: 0.5rem 0;
-}
-.service-card-horizontal:hover {
-    box-shadow: 0 8px 32px #1a431420, 0 3px 12px #1a431420;
-    transform: translateY(-3px) scale(1.01);
-}
-.service-img-horizontal {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 0 20px 20px 0;
-    margin-right: 0;
-}
-.service-card-content {
-    padding: 2rem 2.5rem;
-    background: transparent;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} 
-.service-card-content h3 {
-    color: var(--primary-color);
-    font-size: 1.4rem;
-    margin-bottom: 0.7rem;
-}
-.service-card-content p {
-    color: #222;
-    font-size: 1.08rem;
-    margin-bottom: 0;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background-color: #e6e9ef;
-    border-radius: 20px;
-    padding: 2.5rem;
-    text-align: center;
-    box-shadow: 8px 8px 16px #c5c8ce,
-               -8px -8px 16px #ffffff;
-    transition: transform 0.32s cubic-bezier(.19,1,.22,1), box-shadow 0.32s cubic-bezier(.19,1,.22,1);
-    will-change: transform, box-shadow;
-    opacity: 1; /* Make cards visible by default */
-    transform: translateY(0) scale(1); /* Reset transform to normal position */
-}
-
-.service-card.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    transition-delay: 0.1s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 12px 12px 24px #c5c8ce,
-               -12px -12px 24px #ffffff;
-}
-
-.service-card:active {
-    box-shadow: inset 8px 8px 16px #c5c8ce,
-                inset -8px -8px 16px #ffffff;
-    transform: translateY(0);
-}
-
-.service-icon {
-    font-size: 3rem;
-    color: #4a6bff;
-    margin-bottom: 1.5rem;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    border-radius: 50%;
-    background: #e6e9ef;
-    box-shadow: 6px 6px 12px #c5c8ce,
-               -6px -6px 12px #ffffff;
-}
-
-.service-card:hover .service-icon {
-    color: #4a6bff;
-    box-shadow: 8px 8px 16px #c5c8ce,
-               -8px -8px 16px #ffffff;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.5px;
-    color: #4a6bff;
-    text-shadow: 2px 2px 3px #ffffff, 
-               -2px -2px 3px #c5c8ce;
-}
-
-.service-card p {
-    color: #555;
-    font-size: 1.08rem;
-    text-shadow: 1px 1px 2px #ffffff, 
-               -1px -1px 2px #c5c8ce;
-    font-weight: 500;
-}
+/* Services CSS moved to css/services.css */
 
 
 /*
@@ -1126,6 +950,39 @@ nav {
     border-radius: 10px;
 }
 
+/* Clickable service cards CSS moved to css/services.css */
+
+.clickable-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(26, 67, 20, 0.15);
+}
+
+.clickable-card .learn-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.clickable-card:hover .learn-more {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Service detail pages CSS moved to css/services.css */
+
 /*
 ====================================
  FOOTER SECTION
@@ -1134,9 +991,10 @@ nav {
 footer {
     background: #e6e9ef;
     color: #555;
-    padding: 4rem 0 2rem;
-    box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 5rem 0;
+    background: transparent;
+    box-shadow: none;
+    border: none;
 }
 
 .footer-content {
@@ -1232,16 +1090,14 @@ footer {
     padding: 30px;
     opacity: 1;
     margin-top: 20px;
-    box-shadow: inset 8px 8px 16px #c5c8ce,
-                inset -8px -8px 16px #ffffff;
+    box-shadow: none;
 }
 
 .founder-content {
     text-align: center;
     padding: 0 30px 30px;
     color: #555;
-    text-shadow: 1px 1px 2px #ffffff, 
-               -1px -1px 2px #c5c8ce;
+    text-shadow: none;
 }
 
 .footer-bottom {
@@ -1341,6 +1197,8 @@ footer {
         border-radius: 5px;
     }
 }
+
+/* Service responsive CSS moved to css/services.css */
 
 @media (max-width: 576px) {
     .container {
