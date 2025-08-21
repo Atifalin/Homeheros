@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations | Home Heros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/styles-dark.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/social-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Locations specific styles */
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .location-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .location-map-container {
+            position: relative;
+            width: 100%;
+            height: 160px;
+            overflow: hidden;
+        }
+        
+        .location-map {
+            width: 100%;
+            height: 160px;
+            border: none;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.1);
+            pointer-events: none;
+        }
+        
+        .view-map-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.9);
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .location-content {
+            padding: 15px;
+        }
+        
+        .location-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+        
+        .location-content p {
+            color: #222;
+            margin-bottom: 10px;
+            font-weight: 500;
+            line-height: 1.4;
+            font-size: 0.95rem;
+        }
+        
+        .location-cta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+        
+        .location-cta a {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        
+        .location-cta a:hover {
+            background: var(--primary-dark);
+        }
+        
+        .locations-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+        
+        .locations-intro p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero mini-hero">
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="index.html" style="text-decoration:none;"><h1>Home Heros</h1></a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="locations.html" class="active">Locations</a></li>
+                <li><a href="register.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-bento">
+            <div class="hero-bento-text">
+                <h1>Our Service Locations</h1>
+                <p>Proudly serving communities across the beautiful Okanagan Valley and beyond. Find Home Heros in your area today.</p>
+            </div>
+            <div class="hero-bento-logo">
+                <img src="images/logo.png" alt="Home Heros brand logo: green house with heart and sparkles" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="locations-section">
+    <div class="container">
+        <div class="locations-intro">
+            <h2>Communities We Serve</h2>
+            <p>Home Heros is proud to offer our full range of services throughout the Okanagan Valley and surrounding areas. Whether you're in a bustling city center or a peaceful small town, our professional team is ready to help make your home life easier.</p>
+        </div>
+        
+        <div class="locations-grid">
+            <!-- Kelowna -->
+            <div class="location-card">
+                <div class="location-map-container">
+                    <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82763.53709088125!2d-119.54177242051392!3d49.88088349934732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537d8cb6e3c730b3%3A0x4ef8e53ddab4c4f7!2sKelowna%2C%20BC!5e0!3m2!1sen!2sca!4v1629902234567!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-overlay"></div>
+                    <a href="https://www.google.com/maps/place/Kelowna,+BC" target="_blank" class="view-map-btn">View larger map</a>
+                </div>
+                <div class="location-content">
+                    <h3>Kelowna</h3>
+                    <p>The heart of the Okanagan, Kelowna offers beautiful lakeside living with urban amenities. Our full range of services is available throughout the city and surrounding areas.</p>
+                    <div class="location-cta">
+                        <a href="index.html#services">View Services</a>
+                        <a href="contact.html">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kamloops -->
+            <div class="location-card">
+                <div class="location-map-container">
+                    <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80879.03049191826!2d-120.41508807772455!3d50.67439499586946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537e2cd33d0d3b31%3A0xd23e96aa9a6945e7!2sKamloops%2C%20BC!5e0!3m2!1sen!2sca!4v1629902334567!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-overlay"></div>
+                    <a href="https://www.google.com/maps/place/Kamloops,+BC" target="_blank" class="view-map-btn">View larger map</a>
+                </div>
+                <div class="location-content">
+                    <h3>Kamloops</h3>
+                    <p>Known for its rivers, mountains, and sunny climate, Kamloops residents can now enjoy our complete range of home services, from cleaning to handyman work.</p>
+                    <div class="location-cta">
+                        <a href="index.html#services">View Services</a>
+                        <a href="contact.html">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vernon -->
+            <div class="location-card">
+                <div class="location-map-container">
+                    <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40222.98063403765!2d-119.30999387013626!3d50.26083769340701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537dd8e1f3b97521%3A0x501c3818a4e47bb1!2sVernon%2C%20BC!5e0!3m2!1sen!2sca!4v1629902434567!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-overlay"></div>
+                    <a href="https://www.google.com/maps/place/Vernon,+BC" target="_blank" class="view-map-btn">View larger map</a>
+                </div>
+                <div class="location-content">
+                    <h3>Vernon</h3>
+                    <p>Nestled between three lakes, Vernon offers a perfect blend of outdoor recreation and small-city charm. Our team provides exceptional service throughout the Vernon area.</p>
+                    <div class="location-cta">
+                        <a href="index.html#services">View Services</a>
+                        <a href="contact.html">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Penticton -->
+            <div class="location-card">
+                <div class="location-map-container">
+                    <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41481.80653094694!2d-119.61542787177734!3d49.48138200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486434b3c8a683b%3A0x5a361ae58362539d!2sPenticton%2C%20BC!5e0!3m2!1sen!2sca!4v1629902534567!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-overlay"></div>
+                    <a href="https://www.google.com/maps/place/Penticton,+BC" target="_blank" class="view-map-btn">View larger map</a>
+                </div>
+                <div class="location-content">
+                    <h3>Penticton</h3>
+                    <p>Located between two lakes, Penticton is famous for its beaches, wineries, and outdoor activities. Home Heros is proud to serve this vibrant community with our full range of services.</p>
+                    <div class="location-cta">
+                        <a href="index.html#services">View Services</a>
+                        <a href="contact.html">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Osoyoos -->
+            <div class="location-card">
+                <div class="location-map-container">
+                    <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20800.77484915175!2d-119.48377232177734!3d49.03221200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5482ba32e9e4e199%3A0x6a6411aabd8faeef!2sOsoyoos%2C%20BC!5e0!3m2!1sen!2sca!4v1629902634567!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-overlay"></div>
+                    <a href="https://www.google.com/maps/place/Osoyoos,+BC" target="_blank" class="view-map-btn">View larger map</a>
+                </div>
+                <div class="location-content">
+                    <h3>Osoyoos</h3>
+                    <p>Canada's warmest welcome awaits in Osoyoos, home to Canada's only desert and beautiful Osoyoos Lake. Our team provides exceptional home services throughout the area.</p>
+                    <div class="location-cta">
+                        <a href="index.html#services">View Services</a>
+                        <a href="contact.html">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Oliver -->
+            <div class="location-card">
+                <div class="location-map-container">
+                    <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20767.07484915175!2d-119.55377232177734!3d49.18221200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5482ba32e9e4e199%3A0x6a6411aabd8faeef!2sOliver%2C%20BC!5e0!3m2!1sen!2sca!4v1629902734567!5m2!1sen!2sca" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="map-overlay"></div>
+                    <a href="https://www.google.com/maps/place/Oliver,+BC" target="_blank" class="view-map-btn">View larger map</a>
+                </div>
+                <div class="location-content">
+                    <h3>Oliver</h3>
+                    <p>Known as the Wine Capital of Canada, Oliver is surrounded by vineyards and stunning landscapes. Home Heros is delighted to offer our services to this charming community.</p>
+                    <div class="location-cta">
+                        <a href="index.html#services">View Services</a>
+                        <a href="contact.html">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section" style="background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%); padding: 60px 0; margin-top: 60px; text-align: center;">
+    <div class="container">
+        <div class="cta-content">
+            <h2 style="color: white; margin-bottom: 20px; font-size: 2rem;">Ready to Experience Home Heros in Your Area?</h2>
+            <p style="color: white; margin-bottom: 30px; font-weight: 400; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Whether you need cleaning services, handyman help, or any of our other professional services, we're just a click away. Contact us today for a personalized quote.</p>
+            <a href="contact.html" class="cta-button" style="background: white; color: var(--primary-color); padding: 12px 30px; border-radius: 8px; font-weight: 600; display: inline-block; text-decoration: none; transition: all 0.3s ease; border: 2px solid white;">Get Started</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Home Heros</h2>
+                <p>Because every home deserves a hero</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="register.html">Join Our Team</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Utkarsh@homeheros.ca">Utkarsh@homeheros.ca</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Bavneet@homeheros.ca">Bavneet@homeheros.ca</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Garima@homeheros.ca">Garima@homeheros.ca</a></p>
+                <div class="social-icons">
+                    <a href="#" style="display: none;"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/homeheros176984?t=XeNkAU52D0UxSRiKaIC43w" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/homeheros5/#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/home-heros-7b37a9375/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Home Heros. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+    <script src="js/mobile-nav.js"></script>
+</body>
+</html>

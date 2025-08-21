@@ -632,6 +632,25 @@
     margin-top: 2rem;
 }
 
+/* Pricing Disclaimer */
+.pricing-disclaimer {
+    background: #1a4314;
+    color: white !important;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0 0;
+    border-radius: 8px;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 400;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pricing-disclaimer p {
+    color: white !important;
+    margin: 0;
+}
+
 /* Responsive Design for Service Cards */
 @media (max-width: 768px) {
     .services-list-horizontal {

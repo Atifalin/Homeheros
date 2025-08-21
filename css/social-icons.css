@@ -60,3 +60,8 @@
 .social-icons .fa-facebook {
     display: none;
 }
+
+/* Hide founders section on about page */
+.founders-section {
+    display: none;
+}

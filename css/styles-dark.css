@@ -215,6 +215,50 @@ footer {
     color: #fff;
 }
 
+/* Locations page specific dark theme overrides */
+.locations-intro h2 {
+    color: #fff !important;
+}
+
+.locations-intro p {
+    color: #fff !important;
+}
+
+.location-card {
+    background: #0e3c15 !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.location-content h3 {
+    color: #fff !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.location-content p {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
+}
+
+.view-map-btn {
+    background: rgba(255,255,255,0.9) !important;
+    color: #1a4314 !important;
+    font-weight: 600 !important;
+}
+
+.map-overlay {
+    background: rgba(0,0,0,0.2) !important;
+}
+
+.location-cta a {
+    background: #1a4314 !important;
+    color: #fff !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    font-weight: 600 !important;
+}
+
 .social-icons a {
     background-color: #14521e;
     color: #fff;
