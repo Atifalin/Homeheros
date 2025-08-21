@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Contractor | Home Heros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-dark.css">
+    <link rel="stylesheet" href="css/form-styles.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="hero mini-hero">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html" style="text-decoration:none;"><h1 style="color:#1a4314;">Home Heros</h1></a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="register.html" class="active">Register as Contractor</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+            </nav>
+            <div class="hero-bento">
+                <div class="hero-bento-text">
+                    <h1>Register as a Contractor</h1>
+                    <p>Join our network of trusted professionals and connect with Canadian families seeking top-quality home services. Cleaning, cooking, pet care, handyman work and more—become a Home Hero today!</p>
+                </div>
+                <div class="hero-bento-logo">
+                    <img src="images/logo.png" alt="Home Heros Logo" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="register-section">
+        <div class="container">
+            <h2>Contractor Application</h2>
+            <p>Join our network of trusted professionals and connect with Canadian families seeking top-quality home services.</p>
+            <form class="register-form" action="https://formspree.io/f/xanjzqar" method="POST">
+                <div class="form-group">
+                    <label for="name">First & Last Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Why are you interested in the service industry?*</label>
+                    <textarea id="interest" name="interest" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Past experience in service industry*</label>
+                    <textarea id="experience" name="experience" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="about">Brief description about yourself*</label>
+                    <textarea id="about" name="about" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="resume_link">Resume & Cover Letter</label>
+                    <p class="form-helper">Please provide links to your resume and cover letter using one of the following options:</p>
+                    <div class="option-tabs">
+                        <div class="option-tab active" data-tab="link">URL Link</div>
+                        <div class="option-tab" data-tab="text">Paste Text</div>
+                        <div class="option-tab" data-tab="email">Email Later</div>
+                    </div>
+                    <div class="tab-content active" id="link-tab">
+                        <input type="url" id="resume_link" name="resume_link" placeholder="Link to your resume (Google Drive, Dropbox, etc.)">
+                        <input type="url" id="cover_letter_link" name="cover_letter_link" placeholder="Link to your cover letter (Google Drive, Dropbox, etc.)">
+                    </div>
+                    <div class="tab-content" id="text-tab">
+                        <textarea id="resume_text" name="resume_text" rows="4" placeholder="Paste your resume content here"></textarea>
+                        <textarea id="cover_letter_text" name="cover_letter_text" rows="4" placeholder="Paste your cover letter content here"></textarea>
+                    </div>
+                    <div class="tab-content" id="email-tab">
+                        <p>Check this box if you prefer to email your resume and cover letter separately to <a href="mailto:careers@homeheros.ca">careers@homeheros.ca</a> with your name in the subject line.</p>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="will_email" name="will_email" value="yes">
+                            <label for="will_email">I will email my resume and cover letter separately</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="cta-button">Submit Application</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Home Heros</h2>
+                <p>Because every home deserves a hero</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="register.html">Register as Contractor</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Utkarsh@homeheros.ca">Utkarsh@homeheros.ca</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Bavneet@homeheros.ca">Bavneet@homeheros.ca</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:Garima@homeheros.ca">Garima@homeheros.ca</a></p>
+                <div class="social-icons" style="display: flex; justify-content: center; gap: 18px; margin-top: 10px;">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Home Heros. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="js/script.js"></script>
+    <script src="js/form-tabs.js"></script>
+    <script src="js/mobile-nav.js"></script>
+</body>
+</html>

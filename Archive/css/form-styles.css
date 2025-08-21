@@ -1,0 +1,194 @@
+/*
+====================================
+ REGISTRATION FORM STYLES
+====================================
+*/
+
+.register-section {
+    padding: 4rem 0;
+    background-color: transparent;
+}
+
+.register-section h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #fff !important;
+}
+
+.register-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    color: #e8f5ec;
+}
+
+.register-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #14521e;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group.half {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-helper {
+    font-size: 0.9rem;
+    color: #e8f5ec;
+    margin-bottom: 1rem;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="tel"],
+.register-form input[type="url"],
+.register-form select,
+.register-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #1a4314;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #17401a;
+    color: #fff;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.register-form input::placeholder,
+.register-form textarea::placeholder {
+    color: #a0c9a4;
+    opacity: 0.7;
+}
+
+.register-form input:focus,
+.register-form select:focus,
+.register-form textarea:focus {
+    outline: none;
+    border-color: #e8f5ec;
+    box-shadow: 0 0 0 2px rgba(232, 245, 236, 0.2);
+}
+
+.register-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.register-form button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.register-form button:hover {
+    background: #218838;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+}
+
+/* Resume & Cover Letter Options */
+.option-tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #1a4314;
+}
+
+.option-tab {
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #a0c9a4;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.option-tab:hover {
+    color: #e8f5ec;
+}
+
+.option-tab.active {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.tab-content {
+    display: none;
+    padding: 1rem 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content input,
+.tab-content textarea {
+    margin-bottom: 1rem;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    display: inline;
+    color: #e8f5ec;
+}
+
+.tab-content p {
+    margin-top: 0.5rem;
+    display: inline;
+    color: #e8f5ec;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .register-form {
+        padding: 1.5rem;
+    }
+    
+    .option-tab {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

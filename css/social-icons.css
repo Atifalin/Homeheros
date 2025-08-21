@@ -1,0 +1,62 @@
+/* Social Media Icons with Official Colors */
+/* Container to match contact info alignment */
+.social-icons-container {
+    display: block;
+    width: auto;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.social-icons {
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
+    margin-top: 15px !important;
+    margin-left: 24px !important;
+    padding-left: 0 !important;
+    width: auto !important;
+    align-items: center !important;
+}
+
+.social-icons a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    transition: transform 0.3s ease !important;
+    margin: 0 5px !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Official brand colors */
+.social-icons .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+}
+
+.social-icons .fa-x-twitter {
+    color: #000000;
+    font-size: 20px;
+}
+
+.social-icons .fa-linkedin {
+    color: #0077b5;
+    font-size: 22px;
+}
+
+/* Hide Facebook icon */
+.social-icons .fa-facebook {
+    display: none;
+}

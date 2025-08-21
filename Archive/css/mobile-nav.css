@@ -1,0 +1,114 @@
+/* 
+====================================
+ MOBILE NAVIGATION STYLES
+====================================
+*/
+
+/* Mobile menu button (hamburger) */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    nav {
+        position: relative;
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #1a4314;
+        padding: 1rem 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 99;
+    }
+    
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+        visibility: visible;
+        padding: 1rem 0;
+    }
+    
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.8rem 1.5rem;
+        color: #fff !important;
+        font-weight: 500;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Dark theme adjustments */
+body .mobile-menu-btn span {
+    background-color: #fff;
+}
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-links {
+        margin-top: 0;
+    }
+    
+    .nav-links li {
+        margin: 0;
+    }
+}

@@ -214,6 +214,94 @@ nav {
     box-shadow: none;
 }
 
+/* Hero with background video variant */
+.hero--video {
+    position: relative;
+}
+.hero--video .hero-video-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+.hero--video .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.hero--video .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    /* Dark green tinted overlay for readability, keeps brand tone */
+    background: linear-gradient(180deg, rgba(10,20,10,0.45) 0%, rgba(10,20,10,0.55) 45%, rgba(10,20,10,0.6) 100%);
+    mix-blend-mode: normal;
+}
+/* Remove decorative blobs over video */
+.hero--video::before,
+.hero--video::after {
+    display: none;
+}
+
+/* Elevate content above video/overlay */
+.hero--video .container,
+.hero--video nav {
+    position: relative;
+    z-index: 2;
+}
+
+/* Bento card on video: translucent dark card with white text */
+.hero--video .hero-bento {
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+.hero--video .hero-bento-text h1 {
+    color: #fff;
+}
+.hero--video .hero-bento-text p {
+    color: #f1f5f1;
+}
+.hero--video .hero-bento-logo img {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 18px rgba(0,0,0,0.25);
+}
+
+/* Motion/accessibility and mobile tuning */
+@media (prefers-reduced-motion: reduce) {
+    .hero--video .hero-video { display: none; }
+    .hero--video .hero-video-wrap {
+        background: url('../images/hero-poster.jpg') center/cover no-repeat;
+    }
+}
+@media (max-width: 600px) {
+    .hero { min-height: 520px; }
+    .hero--video .hero-bento { background: rgba(0,0,0,0.5); }
+}
+
+/* Desktop: make hero full viewport height and add space between nav and bento */
+@media (min-width: 1024px) {
+    .hero--video {
+        min-height: 100vh;
+        min-height: 100svh; /* use dynamic viewport if supported */
+    }
+    .hero--video nav {
+        margin-bottom: 4rem; /* more breathing room to reveal video */
+    }
+    .hero--video .hero-bento {
+        margin-top: 10rem; /* drop bento further on desktop */
+    }
+}
+
+/* XL screens: nudge bento a bit more down */
+@media (min-width: 1440px) {
+    .hero--video .hero-bento { margin-top: 12rem; }
+}
+
 .hero-bento {
     display: flex;
     align-items: center;
@@ -1183,22 +1271,6 @@ footer {
         flex-wrap: wrap;
     }
 }
-    
-    .signup-form {
-        flex-direction: column;
-    }
-    
-    .signup-form input {
-        border-radius: 5px;
-        margin-bottom: 1rem;
-    }
-    
-    .submit-button {
-        border-radius: 5px;
-    }
-}
-
-/* Service responsive CSS moved to css/services.css */
 
 @media (max-width: 576px) {
     .container {

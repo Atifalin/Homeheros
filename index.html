@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="css/styles-dark.css">
     <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/social-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -17,7 +18,16 @@
          HERO SECTION
          Update your brand name, headline, subheadline, CTA text, and hero image below.
     =========================-->
-    <section class="hero">
+    <section class="hero hero--video">
+        <!-- Background video and overlay -->
+        <div class="hero-video-wrap" aria-hidden="true">
+            <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+                <source src="videos/hero.mp4" type="video/mp4">
+                <!-- Optional fallback WebM -->
+                <source src="videos/hero.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container">
             <nav>
                 <div class="logo">
@@ -32,7 +42,7 @@
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="register.html">Register as Contractor</a></li>
+    <li><a href="register.html">Careers</a></li>
     <li><a href="contact.html">Contact</a></li>
 </ul>
             </nav>
@@ -149,11 +159,11 @@
                     <p><i class="fas fa-envelope"></i> <a href="mailto:Utkarsh@homeheros.ca">Utkarsh@homeheros.ca</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:Bavneet@homeheros.ca">Bavneet@homeheros.ca</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:Garima@homeheros.ca">Garima@homeheros.ca</a></p>
-                    <div class="social-icons" style="display: flex; justify-content: center; gap: 18px; margin-top: 10px;">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-x-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <div class="social-icons">
+                        <a href="#" style="display: none;"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/homeheros176984?t=XeNkAU52D0UxSRiKaIC43w" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/homeheros5/#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/home-heros-7b37a9375/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
             </div>
