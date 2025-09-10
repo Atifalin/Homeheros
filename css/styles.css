@@ -501,30 +501,145 @@ nav {
 ====================================
 */
 
-.founders-section {
+/* Founder Section */
+.founder-section {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto 3.5rem auto;
+    padding: 2.5rem 2rem;
+    position: relative;
+}
+
+.founder-section .section-title {
+    text-align: center;
+    margin-bottom: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+
+.founder-story {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Team Section */
+.team-section {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto 3.5rem auto;
     padding: 2.5rem 2rem 2.5rem 2rem;
-    background: #f7faf7;
-    border-radius: 22px;
-    box-shadow: 0 2px 16px 0 rgba(26,67,20,0.07);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
 }
-.founders-section .team-heading {
+
+.team-section .section-title {
     text-align: center;
-    color: var(--primary-color);
-    font-size: 2.2rem;
     margin-bottom: 2.2rem;
     font-weight: 700;
+    color: var(--primary-color);
 }
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(26, 67, 20, 1) 0%, rgba(20, 82, 30, 1) 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(26, 67, 20, 0.2);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-member:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(26, 67, 20, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.team-member h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.team-member-title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-top: 0.5rem;
+}
+
 @media (max-width: 700px) {
-    .founders-section {
-        padding: 1.3rem 0.5rem 2rem 0.5rem;
-        border-radius: 14px;
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        padding: 0 0.5rem;
     }
-    .founders-section .team-heading {
-        font-size: 1.4rem;
-        margin-bottom: 1.2rem;
+}
+
+@media (max-width: 480px) {
+    .founder-section {
+        padding: 0;
+    }
+    
+    
+    .team-section {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .founder-section .section-title,
+    .team-section .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .founder-story {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+        min-height: 150px;
+    }
+    
+    .team-member h3 {
+        font-size: 1.3rem;
+    }
+    
+    .team-member-title {
+        font-size: 0.9rem;
     }
 }
 
@@ -759,68 +874,9 @@ nav {
     transform: translateY(0);
 }
 
-.founders-interactive {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    margin: 32px 0;
-}
+/* Founder and team styles moved to new section above */
 
-.founder-profile {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 40px;
-    background-color: #e6e9ef;
-    border-radius: 20px;
-    box-shadow: none;
-    margin-top: 16px;
-}
-
-.founder-image-circle {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 8px solid #e6e9ef;
-    box-shadow: none;
-    position: relative;
-    margin: -100px auto 30px;
-    background: #e6e9ef;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.founder-image-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(10%) contrast(1.1);
-}
-
-.founder-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.5px;
-}
-
-.founder-title {
-    color: #4a6bff;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-}
-
-.founder-bio {
-    color: #555;
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
+/* Founder bio styles moved to new section above */
 
 
 .mission {
@@ -1160,33 +1216,7 @@ footer {
                -3px -3px 6px #ffffff;
 }
 
-.founder-full-story {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s ease, padding 0.6s ease, opacity 0.4s ease;
-    padding: 0;
-    opacity: 0;
-    position: relative;
-    z-index: 5;
-    clear: both;
-    background: #e6e9ef;
-    border-radius: 15px;
-}
-
-.founder-full-story.active {
-    max-height: 1000px;
-    padding: 30px;
-    opacity: 1;
-    margin-top: 20px;
-    box-shadow: none;
-}
-
-.founder-content {
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #555;
-    text-shadow: none;
-}
+/* Founder content styles moved to new section above */
 
 .footer-bottom {
     text-align: center;
@@ -1200,45 +1230,7 @@ footer {
 
 /* Responsive Design */
 @media (min-width: 992px) {
-    .founder-profile {
-        padding-left: 150px;
-        min-height: 250px;
-    }
-    
-    .founder-profile:nth-child(even) {
-        padding-left: 30px;
-        padding-right: 150px;
-    }
-    
-    .founder-image-circle {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        left: -70px;
-        top: 50px;
-        margin: 0;
-        border-width: 8px;
-    }
-    
-    .founder-profile:nth-child(even) .founder-image-circle {
-        left: auto;
-        right: -70px;
-    }
-    
-    .founder-content {
-        text-align: left;
-        padding-left: 30px;
-    }
-    
-    .founder-profile:nth-child(even) .founder-content {
-        text-align: right;
-        padding-right: 30px;
-        padding-left: 0;
-    }
-    
-    .founder-full-story {
-        margin-top: 40px;
-    }
+    /* Founder responsive styles moved to new section above */
 }
 
 @media (max-width: 1024px) {
