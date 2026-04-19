@@ -5,13 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Heros - Coming Soon</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS first -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/services.css">
-    <link rel="stylesheet" href="css/styles-dark.css">
+    <link rel="stylesheet" href="css/performance.css">
+    
+    <!-- Non-critical CSS with media attribute for deferred loading -->
+    <link rel="stylesheet" href="css/styles-dark.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/mobile-nav.css">
     <link rel="stylesheet" href="css/social-icons.css">
+    
+    <!-- External resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="images/logo.png">
 </head>
 <body>
     <!-- ========================
@@ -21,10 +36,10 @@
     <section class="hero hero--video">
         <!-- Background video and overlay -->
         <div class="hero-video-wrap" aria-hidden="true">
-            <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+            <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.png" preload="metadata">
                 <source src="videos/hero.mp4" type="video/mp4">
                 <!-- Optional fallback WebM -->
-                <source src="videos/hero.webm" type="video/webm">
+                <!-- <source src="videos/hero.webm" type="video/webm"> -->
             </video>
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
@@ -53,7 +68,7 @@
     <p>Connecting Canadian families with trusted household professionals for cleaning, cooking, pet care, and more. Reclaim your time for what truly matters.</p>
   </div>
   <div class="hero-bento-logo">
-    <img src="images/logo.png" alt="Home Heros Logo" />
+    <img src="images/logo.png" alt="Home Heros Logo" loading="eager" />
   </div>
 </div>
         </div>
@@ -166,8 +181,9 @@
         <li><a href="#services">Services</a></li>
         <li><a href="locations.html">Locations</a></li>
         <li><a href="register.html">Register as Contractor</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+        <li><a href="contractor-agreement.html">Contractor Agreement</a></li>
     </ul>
 </div>
                 <div class="footer-contact">
@@ -189,6 +205,8 @@
         </div>
     </footer>
 
+    <!-- Performance optimization script - load first -->
+    <script src="js/performance-optimizer.js"></script>
     <script src="js/script.js"></script>
     <script src="js/mobile-nav.js"></script>
     <!-- Card flip functionality for founder bios -->

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Check | Home Heros</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/styles-dark.css">
+    <link rel="stylesheet" href="css/mobile-nav.css">
+    <link rel="stylesheet" href="css/social-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .background-check-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .background-check-content h1 {
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        .background-check-content .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary-green);
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+            border-radius: 8px;
+        }
+        .info-box h3 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+        .info-box p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .info-box ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        .info-box li {
+            color: #333;
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        .redirect-button {
+            display: inline-block;
+            background: var(--primary-green);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(26, 67, 20, 0.2);
+        }
+        .redirect-button:hover {
+            background: #1a4314;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 67, 20, 0.3);
+        }
+        .redirect-button i {
+            margin-left: 10px;
+        }
+        .consent-text {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff3cd;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #856404;
+        }
+        .consent-text strong {
+            color: #1a4314;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero mini-hero">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html" style="text-decoration:none;"><h1>Home Heros</h1></a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="register.html">Careers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero-bento">
+                <div class="hero-bento-text">
+                    <h1>Background Check Verification</h1>
+                    <p>Complete your background check to join the Home Heros team.</p>
+                </div>
+                <div class="hero-bento-logo">
+                    <img src="images/logo.png" alt="Home Heros brand logo" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="background-check-content">
+        <h1><i class="fas fa-shield-check" style="color: var(--primary-green);"></i> Background Check Required</h1>
+        <p class="subtitle">To ensure the safety and trust of our community, all service providers must complete a background check before joining Home Heros.</p>
+
+        <div class="info-box">
+            <h3>What to Expect</h3>
+            <p>The background check process includes:</p>
+            <ul>
+                <li>Identity verification</li>
+                <li>Criminal record check</li>
+                <li>Employment history verification</li>
+                <li>Reference checks</li>
+            </ul>
+            <p>The process typically takes 3-5 business days to complete.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>What You'll Need</h3>
+            <ul>
+                <li>Valid government-issued photo ID</li>
+                <li>Social Insurance Number (SIN)</li>
+                <li>Current address information</li>
+                <li>Employment history for the past 5 years</li>
+            </ul>
+        </div>
+
+        <div class="consent-text">
+            <strong>Important:</strong> By clicking the button below, you consent to Home Heros conducting a background check as part of the contractor onboarding process. Your information will be handled securely and in accordance with our <a href="privacy-policy.html" style="color: #1a4314; text-decoration: underline;">Privacy Policy</a>.
+        </div>
+
+        <a href="#" class="redirect-button" id="backgroundCheckBtn">
+            Proceed to Background Check <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <p style="margin-top: 30px; color: #666; font-size: 0.9rem;">
+            Need help? Contact us at <a href="mailto:careers@homeheros.ca" style="color: var(--primary-green);">careers@homeheros.ca</a>
+        </p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Home Heros</h3>
+                    <p>Making home life easier for Canadian families.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                        <li><a href="register.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="contractor-agreement.html">Contractor Agreement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: careers@homeheros.ca</p>
+                    <p>British Columbia, Canada</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Home Heros. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/mobile-nav.js"></script>
+    <script>
+        // Placeholder for background check redirect
+        // Replace the URL below with your actual background check provider URL
+        document.getElementById('backgroundCheckBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // TODO: Replace with actual background check URL
+            const backgroundCheckUrl = 'YOUR_BACKGROUND_CHECK_PROVIDER_URL_HERE';
+            
+            // Uncomment the line below when you have the actual URL
+            // window.location.href = backgroundCheckUrl;
+            
+            // For now, show an alert
+            alert('Please configure the background check provider URL in the JavaScript code.');
+        });
+    </script>
+</body>
+</html>
